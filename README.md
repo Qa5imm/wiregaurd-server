@@ -1,8 +1,8 @@
 # Wireguard Server
 
-Tiny Makefile + shell scripts to turn a fresh Linux VPS into a WireGuard VPN server and auto-generate client configs (with QR codes).
+Makefile and shell scripts to turn a fresh Linux VPS into a WireGuard VPN server and auto-generate client configs (with QR codes).
 
-Tested on Ubuntu (20.04/22.04); should work on other Debian-like systems with minor tweaks.
+Tested on Ubuntu (24.04); should work on other Debian-like systems with minor tweaks.
 
 ## Features
 
@@ -46,8 +46,8 @@ sudo make server
 # Enable UFW forwarding and allow SSH + UDP 51820
 sudo make enable-ufw
 
-# Set your public endpoint (VPS public IP or DNS)
-make set-endpoint WG_ENDPOINT=your.public.ip.or.dns
+# Set your public endpoint (VPS public IP)
+make set-endpoint WG_ENDPOINT=your.public.ip
 
 # Add a new client (auto IP + QR in terminal)
 sudo make add-client NAME=android-phone
@@ -59,10 +59,10 @@ sudo make add-client NAME=android-phone
 Download the wireguard mobile app on Android/iOS and scan the QR code
 
 ### Laptop
-Download the wireguard (client)[https://www.wireguard.com/install/] and upload the config file found under /etc/wireguard/clients/<NAME>.conf
+Download the wireguard [client](https://www.wireguard.com/install/) and upload the config file found under `/etc/wireguard/clients/<NAME>.conf`
 
 ## Common Commnads
-
+```bash
 # Show WireGuard status
 sudo make show
 
@@ -72,10 +72,10 @@ sudo make restart
 # Add more clients
 sudo make add-client NAME=laptop
 sudo make add-client NAME=tablet
+```
 
 ### Notes
 
-Default VPN subnet: `10.8.0.0/24`
-Server VPN IP: `10.8.0.1`
-Clients get `10.8.0.2–10.8.0.254` automatically.
-Script assumes `/24` network; adjust if you change WG_NET significantly.
+- Default VPN subnet: `10.8.0.0/24`
+- Server VPN IP: `10.8.0.1`
+- Clients get `10.8.0.2–10.8.0.254` automatically.
