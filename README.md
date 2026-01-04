@@ -23,7 +23,7 @@ Tested on Ubuntu (24.04); should work on other Debian-like systems with minor tw
 ```bash
 
 # Step 0
-ssh into your linux distro
+## ssh into your linux distro
 
 # Step 1
 git clone https://github.com/Qa5imm/wiregaurd-server.git
