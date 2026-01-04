@@ -2,7 +2,7 @@
 
 Tiny Makefile + shell scripts to turn a fresh Linux VPS into a WireGuard VPN server and auto-generate client configs (with QR codes).
 
-Tested on Ubuntu (20.04/22.04); should work on other Debian-like systems with minor tweaks.
+Tested on Ubuntu (24.04); should work on other Debian-like systems with minor tweaks.
 
 ## Features
 
@@ -14,9 +14,7 @@ Tested on Ubuntu (20.04/22.04); should work on other Debian-like systems with mi
 
 ## Requirements
 
-Run on the VPS:
-
-- Ubuntu / Debian
+-  Debian based linux distro
 - `sudo` access
 - Open UDP port `51820` in your cloud firewall / security group
 
