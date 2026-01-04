@@ -21,26 +21,31 @@ Tested on Ubuntu (24.04); should work on other Debian-like systems with minor tw
 ## Quick start
 
 ```bash
+
+# Step 0
+ssh into your linux distro
+
+# Step 1
 git clone https://github.com/Qa5imm/wiregaurd-server.git
 cd wiregaurd-server
 
-# Install make dependency
+# Step 2 (install make)
 sudo apt install make
 
-# Install all required dependencies
+# Step 3 (install required dependencies)
 sudo make install
 
-# Set up WireGuard server (wg0, 10.8.0.1/24, NAT)
+# Step 4 (set up WireGuard server)
 sudo make server
 
-# Enable UFW forwarding and allow SSH + UDP 51820
+# Step 5 (enable UFW forwarding and allow SSH + UDP 51820)
 sudo make enable-ufw
 
-# Set your public endpoint (VPS public IP)
+# Step 6 (set your VPS public IP)
 make set-endpoint WG_ENDPOINT=your.public.ip
 
-# Add a new client (auto IP + QR in terminal)
-sudo make add-client NAME=android-phone
+# Step 7 (Add a client)
+sudo make add-client NAME=myphone
 ```
 
 ## Connection
