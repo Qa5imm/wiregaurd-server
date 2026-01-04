@@ -51,10 +51,11 @@ sudo make add-client NAME=android-phone
 Download the wireguard mobile app on Android/iOS and scan the QR code
 
 ### Laptop
-Download the wireguard (client)[https://www.wireguard.com/install/] and upload the config file found under /etc/wireguard/clients/<NAME>.conf
+Download the wireguard [client](https://www.wireguard.com/install/) and upload the config file found under `/etc/wireguard/clients/<NAME>.conf`
 
 ## Common Commnads
 
+```bash
 # Show WireGuard status
 sudo make show
 
@@ -64,6 +65,7 @@ sudo make restart
 # Add more clients
 sudo make add-client NAME=laptop
 sudo make add-client NAME=tablet
+```
 
 ### Notes
 
