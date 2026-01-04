@@ -69,7 +69,6 @@ sudo make add-client NAME=tablet
 
 ### Notes
 
-Default VPN subnet: `10.8.0.0/24`
-Server VPN IP: `10.8.0.1`
-Clients get `10.8.0.2–10.8.0.254` automatically.
-Script assumes `/24` network; adjust if you change WG_NET significantly.
+- Default VPN subnet: `10.8.0.0/24`
+- Server VPN IP: `10.8.0.1`
+- Clients get `10.8.0.2–10.8.0.254` automatically.
